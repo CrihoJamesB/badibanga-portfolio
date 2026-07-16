@@ -1885,6 +1885,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   #CUSTOM — James BADIBANGA additions
 \*-----------------------------------*/
 
+/* profile photo — clip to the avatar-box radius (20px mobile / 30px desktop) */
+
+.avatar-box img {
+  border-radius: inherit;
+  object-fit: cover;
+}
+
 /* ion-icon inside service cards (replaces img icons) */
 
 .service-icon-box ion-icon {
