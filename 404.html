@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable — James BADIBANGA (Criho)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: hsl(0, 0%, 7%);
+      font-family: 'Poppins', sans-serif;
+      color: hsl(0, 0%, 84%);
+      padding: 20px;
+    }
+
+    .card {
+      max-width: 460px;
+      width: 100%;
+      text-align: center;
+      background: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+      border: 1px solid hsl(0, 0%, 22%);
+      border-radius: 20px;
+      padding: 50px 35px;
+      box-shadow: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+    }
+
+    .code {
+      font-size: 72px;
+      font-weight: 600;
+      color: hsl(45, 100%, 72%);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 500;
+      color: hsl(0, 0%, 98%);
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    a.btn {
+      display: inline-block;
+      padding: 13px 28px;
+      border-radius: 14px;
+      background: linear-gradient(to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50%), hsl(240, 2%, 12%);
+      color: hsl(45, 100%, 72%);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid hsl(0, 0%, 22%);
+      transition: transform 0.25s ease;
+    }
+
+    a.btn:hover { transform: translateY(-2px); }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="code">404</div>
+    <h1>Cette page n'existe pas</h1>
+    <p>Le lien que vous avez suivi est peut-être cassé, ou la page a été déplacée.
+      Le portfolio, lui, est toujours là.</p>
+    <a class="btn" href="/" id="home-link">← Retour à l'accueil</a>
+  </main>
+
+  <script>
+    // GitHub Pages sert ce site sous /badibanga-portfolio/ — "/" y pointerait hors du site
+    if (location.hostname.endsWith('github.io')) {
+      document.getElementById('home-link').href = '/badibanga-portfolio/';
+    }
+  </script>
+</body>
+
+</html>
